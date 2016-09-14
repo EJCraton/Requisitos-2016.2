@@ -1,7 +1,157 @@
 \chapter{Ferramenta de gestão de requisitos}
 
-  Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
-  Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
-  Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
-  Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+\section{Normas e Padrões utilizados na qualidade dos softwares}
+
+  O autor da obra faz a avaliação da qualidade de produto de software através de três normas: a ISO/IEC 9126, relacionada às
+  características de qualidade do produto de software, a ISO/IEC 14598, que serve como guia para avaliação de produto de software
+  e a ISO/IEC 12119, que trata da avaliação de pacotes de software.
+
+\subsection{ISO/IEC 9126}
+
+  Essa norma formada por um conjunto de aspectos que devem ser observados em um software para que seja verificado sua qualidade é
+  dividida em 4 partes, porém a avaliação dos software será usada somente as duas primeiras partes que é a ISO/IEC 9126$-$1 e
+  ISO/IEC 9126$-$2:
+
+\subsubsection{ISO/IEC 9126$-$1}
+
+  Apresenta seis características com suas subcaracterísticas para o modelo de qualidade de software:
+
+  \begin{description}
+    \item[Funcionalidade] \
+      \begin{itemize}
+        \item É a capacidade de prover funções
+        \item \textbf{Adequação}: As funções tem que ser apropriadas aos objetivos do cliente
+        \item \textbf{Acurácia}: Os resultados tem que ter precisão
+        \item \textbf{Interoperabilidade}:É a capacidade de iteração com outros sistemas
+        \item \textbf{Segurança de acesso}: É a capacidade de proteger os dados contra acesso não permitido
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+    \item[Confiabilidade] \
+      \begin{itemize}
+        \item É a capacidade de manter o nível de desempenho
+        \item \textbf{Maturidade}: Capacidade de evitar falhas
+        \item \textbf{Tolerancia}: Capacidade de manter o funcionamento mesmo na ocorrencia de defeitos
+        \item \textbf{Recuperabilidade}: Capacidade de recuperação após falha
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+    \item[Usabilidade] \
+      \begin{itemize}
+        \item Esforço para usar o software pelos usuários
+        \item \textbf{Inteligibilidade}: Facilidade de compreensão das funcionalidades
+        \item \textbf{Apreensibilidade}: Capacidade do usuário de entender o produto
+        \item \textbf{Operacionalidade}: Capacidade do software de fazer com que o usuário o opere
+        \item \textbf{Atratividade}: Ser atraente para o cliente
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+    \item[Eficiência] \
+      \begin{itemize}
+        \item Nível de desempenho do software
+        \item \textbf{Comportamento em relação ao tempo}: Prover informação em periodo de tempo adequado
+        \item \textbf{Comportamento em relação a recursos}: Usar o recurso adequadamente
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+    \item[Manutenibilidade] \
+      \begin{itemize}
+        \item Esforço necessario para fazer modificações
+        \item \textbf{Analisabilidade}: Capacidade de reconhecer problemas causados por defeitos
+        \item \textbf{Modificabilidade}: Capacidade de receber modificações
+        \item \textbf{Estabilidade}: Capacidade de manter-se estável com as modificações
+        \item \textbf{Testabilidade}: Validar as modificações do produto
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+    \item[Portabilidade] \
+      \begin{itemize}
+        \item Capacidade do software de ser transferido de um certo ambiente para outro
+        \item \textbf{Adaptabilidade}: Adaptar a diferentes ambientes sem auxilio externo
+        \item \textbf{Capacidade para ser instalado}: Capacidade de ser instalado em qualquer ambiente
+        \item \textbf{Co-existência}: Capacidade de operar com outro sistema no mesmo ambiente
+        \item \textbf{Capacidade para substituir}: Capacidade de substituir outro sistema com a mesma finalidade
+        \item \textbf{Conformidade}: Capacidade do produto de esta adequado as normas, padrões e etc
+      \end{itemize}
+  \end{description}
+
+\subsubsection{ISO/IEC 9126$-$2}
+
+  A segunda parte da ISO define métricas externas para fazer a medição de qualidade das características e sub-características da
+  primeira parte da norma, sendo aplicáveis a um software executável tanto na fase de teste quanto no início da operação, definindo
+  pesos de grau de importancia das caracteristicas.
+
+  A métrica externa devem ser utilizadas tanto na avaliação do comportamento do sistema em situações específicas quanto na avaliação
+  e indicação de que o produto é eficaz levando em consideração as reais necessidades dos clientes em termos de operação.
+
+\subsection{ISO/IEC 14598}
+
+  Utilizada juntamente com a ISO/IEC 9126, serve serve para definir o processo de avaliação de softwares e para fornecer orientações
+  para avaliação prática. Em termos gerais, mantém o foco nas métricas e no processo de aplicação das mesmas sobre as características
+  e sub-características descritas na ISO/IEC 9126.
+
+\subsection{ISO/IEC 12119}
+
+  Norma utilizada na avaliação de pacotes de software, que são um conjunto completo e documentado de programas fornecidos aos usuários,
+  do jeito que são liberados para o mercado. Esses pacotes também são conhecidos como software de prateleira. Além de estabelecer
+  requisitos para esse tipo de software, a norma provê instruções para o teste dos pacotes.
+
+\section{Processos de avaliação}
+
+  Aqui será abordado o sistema de avaliação que o autor utilizou para avaliar as ferramentas de gerência de requisitos, primeiramente
+  foi feito um estudo na Internet a respeito das principais ferramentas gratuitas utilizadas na gerência de requisitos. Esse estudo foi
+  baseado em sites e fóruns especializados em Engenharia de Software, que têm credibilidade reconhecida na área. Logo após as
+  ferramentas selecionadas foram baixadas e instaladas para análise.
+
+  No processo de avaliação foram definidas as características, sub-características e atributos que devem ser avaliados de acordo com a
+  ISO/IEC 9126 com requisitos da ISO/IEC 12119 e a avaliação foi realizada através da adoção de métricas pré-estabelecidas, o processo
+  foi através de arvore invertida, na qual a avaliação começa nos atributos sobe para sub-características e por ultimo a avaliação da
+  característica.
+
+  As notas finais da avaliação de cada software serão dadas pela soma das notas das características avaliadas. Quanto maior a
+  nota final, maior será a \textbf{qualidade do produto}.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=15cm, keepaspectratio=true]{figuras/ferramentas/caracteristicas.eps}
+    \caption{Distribuição dos atributos, sub-características de uma características}
+  \end{figure}
+
+\subsection{Distribuição dos pontos}
+
+  Para a distribuição de pontos, cada software foi definido uma pontuação total de 120 pontos. Esses 120 pontos foram distribuídos
+  entre as características que, como são cinco, cada uma ficou com 24 pontos. Da mesma forma, os 24 pontos foram distribuídos
+  igualmente entre as sub-características, que por sua vez foram distribuídos igualmente entre os atributos.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=15cm, keepaspectratio=true]{figuras/ferramentas/pontos.eps}
+    \caption{Distribuição dos pontos}
+  \end{figure}
+
+\subsection{Sistema de metricas adotado}
+
+  O sistema de metricas adotados com o pensamento de que  a precisão de uma avaliação de qualidade depende em grande parte das métricas
+  escolhida e se baseado nos requisitos de avaliação da ISO/IEC 14598$-$1 e da ISO/IEC 9126$-$1, o seguinte sistema de métricas foi definido:
+
+  \begin{itemize}
+    \item \textbf{0 $-$ Não possui}: Significa que o atributo avaliado está completamente ausente;
+    \item \textbf{0,5 $-$ Possui parcialmente}: O atributo avaliado possui está presente parcialmente. Com isso, a Nota total por item
+      será dividida pela metade;
+    \item \textbf{1 $-$ Possui totalmente}: O atributo avaliado está totalmente presente;
+  \end{itemize}
+
+  Vale ressaltar que esse sistema de métricas é utilizado na avaliação dos atributos, já que a nota das sub-características é dada pela
+  soma das notas dos atributos. Da mesma forma, a nota das características é dada pela soma das notas das sub-características.
+
+\subsection{Calculo da nota final}
+
+  Cada software será primeiramente analisado separadamente dos outros. Assim, será possível observar as notas de cada item isoladamente.
+  A nota final de cada software se dará da seguinte forma:
+
+  \begin{itemize}
+    \item Nota final = $\displaystyle\sum$ (Nota da característica)
+    \item Nota da característica = $\displaystyle\sum$ (Nota da sub-característica)
+    \item Nota da sub-característica = $\displaystyle\sum$ (Nota do atributo * Nota total por item)
+  \end{itemize}
+
+  Como foi dito, quanto maior a nota final de cada software, maior será sua qualidade, baseada nos quesitos levados em consideração.
+
+\section{Análise das ferramentas}
+
 

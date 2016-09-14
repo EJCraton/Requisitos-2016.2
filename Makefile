@@ -1,4 +1,4 @@
-TARGET = book.pdf
+TARGET = Relatorio.pdf
 
 BIBTEX = bibtex
 LATEX = latex
