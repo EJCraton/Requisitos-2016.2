@@ -21,3 +21,18 @@
 *.idx
 *.fls
 
+*.DS_Store
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
