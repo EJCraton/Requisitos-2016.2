@@ -1,83 +1,291 @@
 \chapter{Processo de Engenharia de Requisitos}
 
-  TODO: Falar um pouco sobre o que é o processo, em linhas gerais basicament.
+  Neste tópico será apresentado o processo de Engenharia de Requisitos elaborado para o projeto, descrevendo quais os papeis,
+  atividades e artefatos que serão utilizados no mesmo, e sua respectiva modelagem criada na ferramenta draw.io, que é uma
+  ferramenta online de desenhos UML e de modelagem.
 
-\subsection{Modelo de Processo de Engenharia de Requisitos}
-  
-  TODO: Inserir a imagem do modelo arrumada já.
+  A abordagem utilizada foi a abordagem ágil, fundamentada no \textbf{SAFe} (Scaled Agile Framework), que permite escalar práticas
+  ágeis em organizações e projetos, provendo artefatos, papéis e atividades em três níveis estruturais do framework: \textbf{Portfolio},
+  que é o nível mais alto da abstração, levantados os requisitos de mais alto nível, sendo eles os temas de investimentos, épicos e
+  épicos enables, \textbf{Programa}, que é o nível que faz a comunicação entre o portifolio e o time, neste nível os requisitos
+  levantados no portifolio são transformados em features e os program increments são planejados e o ultimo é o nível de \textbf{Time},
+  que é o nível mais baixo utilizando o SCRUM, as features são quebradas em histórias de usuários e são implementadas e todos os
+  eventos do scrum estão presentes nesse nível. O nível de \textbf{Fluxo de Valor presente} na versão 4.0 do SAFe não será utilizado,
+  pois não há necessidade deste nível nesse projeto.
 
-\subsection{Papéis}
+  A estrutura dos três níves do SAFe foi mantida porque, segunda Leffingwell (2011), ao diminuir o nível de abstração dos requisitos
+  gradativamente, reduz também o nível de especificação precoce, diminuindo a sobrecarga ao gerenciar os requisitos. Isso também
+  aumenta a agilidade do time por permitir a interpretação dos requisitos de maneira mais fácil para a implementação.
 
-\subsubsection {\textbf{Portfólio}}
+  Logo abaixo será especificado como tratam sobre o modelo do processo de Engenharia de Requisitos, apelidado de \textbf{Big Picture}
+  do projeto, os papéis desempenhados e as atividades e artefatos envolvidos no processo.
+
+\section{Modelo de Processo de Engenharia de Requisitos}
+
+  \begin{figure}[!htb]
+    \centering
+    \includegraphics[width=17cm, keepaspectratio=true]{figuras/maturidade/processo.eps}
+    \caption{Processo da Engenharia de Requisitos}
+  \end{figure}
+
+  \newpage
+
+\section{Papéis}
+
+\subsection{\textbf{Portfólio}}
 
   \begin{itemize}
-    \item \textbf{Gerente de Portfólio de Programa}: Representa a pessoa que tem mais impacto nas decisões tantos estratégicas quanto financeiras dentro do framework, e entende os limites da estratégia de negócio da empresa, de tecnologia e de fundos. Uma de suas responsabilidades é de participar das sessões de escolha e comunicação dos temas de investimento e da definição e priorização do backlog de épicos.
-    \item \textbf{Gerente de Épicos}: Representa o papel na qual toma-se a responsabilidade de gerenciar épicos individuais por todo o processo de protifolo kanban, desenvolvendo casos de negócios. Quando o épico é aprovado, trabalha-se com os principais stakeholders na análise de valor agregado do épico. Quando o épico é aprovado, o gerente de épico trabalha com o time de desenvolvimento e o gerente de produto para estabelecer as atividades de desenvolvimento, para que as mesmas atinjam os benefícios de negócios do épico em especifico.
-    \item \textbf{Arquiteto da empresa}: Representa a pessoa que sempre visa manter uma visão geral das tecnologias, soluções da empresa e iniciativas de desenvolvimento. Uma de suas atividades é entender e comunicar os temas de investimento e outras chaves de negócios para os arquitetos de sistema e stakeholders não técnicos, e também influenciar na decisão de uma modelagem comum e em boas práticas de codificação.
+    \item \textbf{Gerente de Portfólio de Programa}: Representa a pessoa que tem mais impacto nas decisões tantos estratégicas quanto
+      financeiras dentro do framework, e entende os limites da estratégia de negócio da empresa, de tecnologia e de fundos. Uma de suas
+      responsabilidades é de participar das sessões de escolha e comunicação dos temas de investimento e da definição e priorização do
+      backlog de épicos.
+    \item \textbf{Gerente de Épicos}: Representa o papel na qual toma-se a responsabilidade de gerenciar épicos individuais por todo o
+      processo de portifolio kanban, desenvolvendo casos de negócios. Trabalha-se com os principais stakeholders na análise de valor
+      agregado do épico. Quando o épico é aprovado, o gerente de épico trabalha com o time de desenvolvimento e o gerente de produto
+      para estabelecer as atividades de desenvolvimento, para que as mesmas atinjam os benefícios de negócios do épico em especifico.
+    \item \textbf{Arquiteto da empresa}: Representa a pessoa que sempre visa manter uma visão geral das tecnologias, soluções da
+      empresa e iniciativas de desenvolvimento. Uma de suas atividades é entender e comunicar os temas de investimento e outras chaves
+      de negócios para os arquitetos de sistema e stakeholders não técnicos, e também influenciar na decisão de uma modelagem comum e
+      em boas práticas de codificação.
   \end{itemize}
 
-\subsubsection{\textbf{Programa}}
+\subsection{\textbf{Programa}}
 
   \begin{itemize}
-    \item \textbf {Gerente de Releases}: Representa a pessoa que planeja a release, e coordena a implementação de todas as capacidades e funcionalidades nas diversas iterações dentro de uma release. Um de seus papéis é comunicar o status da release para stakeholders externos a empresa, e também de prover uma autorização final da release.
-    \item \textbf {Gerente de Produto}: Junto do Gerente de Soluções, eles formam as principais autoridades de conteúdo. Eles criam a visão do programa, trabalham com os clientes e também com os Product Owners para entenderem e comunicarem as necessidades, participam na validação de soluções propostas, define os requisitos, gerencia e prioriza o fluxo de trabalho e também define releases e Program Increments.
+    \item \textbf{Gerente de Releases}: Representa a pessoa que planeja a release, e coordena a implementação de todas as capacidades e
+      funcionalidades nas diversas iterações dentro de uma release. Um de seus papéis é comunicar o status da release para stakeholders
+      externos a empresa, e também de prover uma autorização final da release.
+    \item \textbf{Gerente de Produto}: Junto do Gerente de Soluções, eles formam as principais autoridades de conteúdo. Eles criam a
+      visão do programa, trabalham com os clientes e também com os Product Owners para entenderem e comunicarem as necessidades,
+      participam na validação de soluções propostas, define os requisitos, gerencia e prioriza o fluxo de trabalho e também define
+      releases e Program Increments.
   \end{itemize}
 
-\subsubsection{\textbf{Time}}
+\subsection{\textbf{Time}}
 
   \begin{itemize}
-    \item \textbf {Product Owner (P.O)}: Representa a pessoa que tem como responsabilidade a definição das histórias de usuário e de priorizar o backlog de time. O P.O desempenha um papel importantíssimo no quesito qualidade, pois é o único do time que tem a responsabilidade de aceitar as histórias como finalizadas. É bastante envolvido na construção do backlog do programa e na preparação e refinamento do planejamento do PI.
-    \item \textbf {Scrum Master}: Representa a pessoa que está sempre monitorando a equipe com o intuito de fazer com que todos sigam a metodologia, ou seja, o Scrum Master monitora os integrantes para que todos cumpram e sigam os princípios da metodologia. Uma das responsabilidades do Scrum Master é manter a equipe focada nos objetivos certos, assegurando um fluxo de produtividade o mais alto possível. Também tem como responsabilidade facilitar os encontros do time, tanto no planejamento quanto na retrospectiva e revisão da sprint.
-    \item \textbf {Desenvolvedores}: Representa as pessoas que vão de fato construir o sistema, produzindo o código fonte e os testes da aplicação. Participa de todas as atividades do processo no nível de time.  
+    \item \textbf{Product Owner (P.O)}: Representa a pessoa que tem como responsabilidade a definição das histórias de usuário e de
+      priorizar o backlog de time. O P.O desempenha um papel importantíssimo no quesito qualidade, pois é o único do time que tem a
+      responsabilidade de aceitar as histórias como finalizadas. É bastante envolvido na construção do backlog do programa e na
+      preparação e refinamento do planejamento do PI
+    \item \textbf{Scrum Master}: Representa a pessoa que está sempre monitorando a equipe com o intuito de fazer com que todos sigam
+      a metodologia, ou seja, o Scrum Master monitora os integrantes para que todos cumpram e sigam os princípios da metodologia.
+      Uma das responsabilidades do Scrum Master é manter a equipe focada nos objetivos certos, assegurando um fluxo de produtividade
+      o mais alto possível. Também tem como responsabilidade facilitar os encontros do time, tanto no planejamento quanto na
+      retrospectiva e revisão da sprint.
+    \item \textbf{Desenvolvedores}: Representa as pessoas que vão de fato construir o sistema, produzindo o código fonte e os testes
+      da aplicação. Participa de todas as atividades do processo no nível de time.
+    \item \textbf{Equipe}: Representa a junção dos três citados acima.
   \end{itemize}
 
 \section{Descrição das atividades}
 
-\subsection{Portfólio}
-  \subsubsection{Definir temas de investimento}
-    \textbf{Entrada:} Contexto da empresa.
+\subsection{\textbf{Portfólio}}
 
-    \textbf{Saída:} Temas de investimento.
+\subsubsection{Aprender contexto da empresa}
 
-    \textbf{Responsável:} Gerente de portfólio.
+  \begin{itemize}
+    \item \textbf{Entrada:} Contexto da empresa.
+    \item \textbf{Saída:} Entendimento das políticas e negócios da empresa.
+    \item \textbf{Responsável:} Time.
+    \item A primeira atividade do processo é aprender o contexto da empresa, suas políticas e negócios, através de encontros com o
+      cliente, buscando um primeiro contato e estabelecendo um canal de comunicação com o cliente.
+  \end{itemize}
 
-    Essa atividade é responsável por gerar os temas de investimento, a partir do contexto da empresa. Esses temas de investimentos serão levantados com o product owner, utilizando as técnicas de elicitação escolhidas.
+\subsubsection{Identificar o problema}
+  \begin{itemize}
+    \item \textbf{Entrada:} Contexto da empresa.
+    \item \textbf{Saída:} Visão geral das necessidades da empresa.
+    \item \textbf{Responsável:} Gerente de portfólio.
+    \item Essa atividade visa fazer reuniões com o product owner, utilizando as tecnicas de elicitação de requisitos para levantar os
+      possiveis problemas.
+  \end{itemize}
 
-  \subsubsection{Definição dos épicos}
-    \textbf{Entrada:} Temas estratégicos.
+\subsubsection{Definir temas de investimento}
+  \begin{itemize}
+    \item \textbf{Entrada:} Problema identificado.
+    \item \textbf{Saída:} Temas de investimento.
+    \item \textbf{Responsável:} Gerente de portfólio.
+    \item Essa atividade é responsável por gerar e documentar os temas de investimento, a partir do contexto da empresa e os problemas.
+      Esses temas de investimentos serão levantados com o product owner, utilizando as técnicas de elicitação.
+  \end{itemize}
 
-    \textbf{Saída:} Backlog de épicos.
+\subsubsection{Definir Épicos}
+  \begin{itemize}
+    \item \textbf{Entrada:} Temas de investimento.
+    \item \textbf{Saída:} Lista de épicos.
+    \item \textbf{Responsável:} Gerente de portifolio.
+    \item Essa atividade é responsável por englobar todos os épicos propostos, tanto épicos de negocio como épicos de enable, em uma fase
+      inicial, na qual nem todos os épicos que foram propostos irão ser definidos.
+    \item A partir dos épicos propostos, é definido o backlog de épicos para a realização do tema de investimento, tendo também os épicos
+      enables, que são os itens de trabalho necessários para apoiar   a implementação dos Épicos, também conhecidos como requisitos não
+      funcionais.
+  \end{itemize}
 
-    \textbf{Responsável:} Gerente de épicos.
-    
-    A partir dos temas estratégicos definidos, é priorizado o tema estratégico mais importante. A partir dele, é definido o backlog de épicos para a realização desse tema de investimento.
+\subsubsection{Validar Épicos}
+  \begin{itemize}
+    \item \textbf{Entrada:} Lista épicos.
+    \item \textbf{Saída:} Portfólio backlog.
+    \item \textbf{Responsável:} Gerente de épicos.
+    \item Com a lista de épicos feito, é realizado uma validação deles com o cliente, para confirmar que é esse o produto que eles
+      tinham em mente.
+  \end{itemize}
 
-  \subsubsection{Validação dos épicos}
-    \textbf{Entrada:} Backlog de épicos.
+\subsubsection{Priorizar Épico}
+  \begin{itemize}
+    \item \textbf{Entrada:} Portfolio de épicos.
+    \item \textbf{Saída:} Épicos priorizados.
+    \item \textbf{Responsável:} Gerente de épicos.
+    \item Dado o Portifolio de épicos concluído e validado, juntamente com o cliente é escolhido o mais importante dentro dos que
+      ainda não foram implementados.
+  \end{itemize}
 
-    \textbf{Saída:} Backlog de épicos válidados.
+\subsubsection{Gerenciar Épicos}
+  \begin{itemize}
+    \item \textbf{Entrada:} Portifolio de épicos.
+    \item \textbf{Responsável:} Gerente de portifolio.
+    \item O gerente de portfolio junto ao resto da equipe irão verificar se existem mais épicos no portfolio backlog ou se é
+      necessária a criação de novos épicos.
+  \end{itemize}
 
-    \textbf{Responsável:} Gerente de épicos.
-    
-    Com ó backlog de épicos feito, é realizado uma validação deles com o cliente, para confirmar que é esse o produto que eles tinham em mente.
+\subsection{\textbf{Programa}}
 
-  \subsubsection{Priorizar épico}
-    \textbf{Entrada:} Backlog de épicos.
+\subsubsection{Definir features e enables}
+  \begin{itemize}
+    \item \textbf{Entrada:} Épicos priorizados.
+    \item \textbf{Saída:} Lista de features e enables.
+    \item \textbf{Responsável:} Gerente de produto.
+    \item A partir da realização de reuniões com o cliente, utilizando as tecnicas de elicitação, serão levantados algumas condições
+      para a construção da solução, sendo algumas dessas condições ferramentas que irão auxiliar na implementação dessas
+      funcionalidades como padrões de projeto, arquitetura, servidores, acessibilidade, etc (requisitos não funcionais ou enables)
+      e outras funcionalidades do produto (requisitos funcionais ou features), na qual nem todos os requisitos que foram propostos
+      irão ser definidos.
+  \end{itemize}
 
-    \textbf{Saída:} Épico priorizado.
+\subsubsection{Validar Features e enables}
+  \begin{itemize}
+    \item \textbf{Entrada:} Lista de Features e enables definidas.
+    \item \textbf{Saída:} Definição do documento de visão e do program backlog.
+    \item \textbf{Responsável:} Gerente de produto
+    \item Com as features e enables definidas, cada uma deve receber uma pontuação de acordo com sua relev\^{a}ncia, ou seja, valor
+      que agrega para o cliente e dificuldade de implementação.
+  \end{itemize}
 
-    \textbf{Responsável:} Gerente de épicos.
-    
-    Dado o backlog de épicos concluído e validado, é escolhido o mais importante dentro dos que ainda não foram implementados.
+\subsubsection{Definir Visão}
+  \begin{itemize}
+    \item \textbf{Entrada:} Program backlog com os requisitos validados.
+    \item \textbf{Saída:} Documento de Visão do produto.
+    \item \textbf{Responsável:} Gerente de produto.
+    \item Com os requisitos validados a equipe terá uma noção de como vai funcionar o produto, ter uma visão geral dele.
+  \end{itemize}
 
-  \subsubsection{Definir temas de investimento}
-    \textbf{Entrada:} Contexto da empresa.
+\subsubsection{Priorizar Features e enables}
+  \begin{itemize}
+    \item \textbf{Entrada:} program backlog.
+    \item \textbf{Saída:} Features e enables priorizados para incremento.
+    \item \textbf{Responsável:} Gerente de produto
+    \item Com as features e enables validadas, o gerente de produto ira definir quais features e anables irá para o incremento do produto
+  \end{itemize}
 
-    \textbf{Saída:} Temas de investimento.
+\subsubsection{Definir Roadmap}
+  \begin{itemize}
+    \item \textbf{Entrada:} Program backlog com os requisitos validados e priorizados.
+    \item \textbf{Saída:} Roadmap: Planejamento do incremento do produto.
+    \item \textbf{Responsável:} Gerente de release.
+    \item Com as features e enables validados e priorizados a equipe terá uma noção do planejamento das séries de releases, cada uma
+      pertinente a um tema, um conjunto de objetivos e a priorização das features. O Roadmap nos dá uma ideia de como a equipe
+      planeja mostrar valor no decorrer do tempo.
+  \end{itemize}
 
-    \textbf{Responsável:} Gerente de portfólio.
-    
-    Essa atividade é responsável por gerar os temas de investimento, a partir do contexto da empresa. Esses temas de investimentos serão levantados com o product owner, utilizando as técnicas de elicitação escolhidas.
+\subsubsection{Planejar Incremento do Produto}
+  \begin{itemize}
+    \item \textbf{Entrada:} Definição do roadmap, da visão e o program backlog com os requisitos validados e priorizados.
+    \item \textbf{Saída:} Objetivos da PI
+    \item \textbf{Responsável:} Gerente de produto.
+    \item Através da visão do produto com suas features e enables e do roadmap com o planejamento de todas as releases do produto,
+      além dos requisitos validados e priorizados para a sprint que será planejada, o planejamento do incremento do produto tem como
+      artefato o objetivos do PI, que é a conexão do time de desenvolvimento com a equipe de negócios da empresa/cliente em relação
+      as features que vai ser implementada nesse incremento do produto ou sprint.
+  \end{itemize}
+
+\subsubsection{Gerenciar Features}
+  \begin{itemize}
+    \item \textbf{Entrada:} Program backlog.
+    \item \textbf{Responsável:} Gerente de release.
+    \item O gerente de release junto ao resto da equipe irão verificar se existem mais features ou enables no program backlog ou se é
+      necessária a criação de novas features ou enables.
+  \end{itemize}
+
+\subsection{\textbf{Time}}
+
+\subsubsection{Definir Histórias de Usuário}
+  \begin{itemize}
+    \item \textbf{Entrada} Features e enables planejadas para o incremento
+    \item \textbf{Saída:} Team backlog
+    \item \textbf{Responsável:} Equipe
+    \item Através dos Planejamento do incremento do produto, na qual vai incluir as features e enables que forám priorizados para esse
+      incremento, será criado o Team backlog com todas as histórias de usuário para validação
+  \end{itemize}
+
+\subsubsection{Validar Histórias de Usuário}
+  \begin{itemize}
+    \item \textbf{Entrada:} Team backlog
+    \item \textbf{Saída:} Team backlog validada
+    \item \textbf{Responsável:} Equipe
+    \item Junto com o product owner e o scrum master a equipe irá validar todas as histórias que irão agregar valor ao produto e ao
+      cliente para serem implementadas.
+  \end{itemize}
+
+\subsubsection{Planejar a Sprint}
+  \begin{itemize}
+    \item \textbf{Entrada:} Team backlog valido.
+    \item \textbf{Saída:} Backlog da sprint.
+    \item \textbf{Responsável:} Equipe
+    \item Através do team backlog validado, iremos criar o backlog da sprint com as historias de usuário que iremos implementar nesse
+      incremento do produto através de iterações.
+  \end{itemize}
+
+\subsubsection{Implementar Funcionalidades}
+  \begin{itemize}
+    \item \textbf{Entrada:} Sprint planejada com o backlog da sprint.
+    \item \textbf{Saída:} Incremento do produto
+    \item \textbf{Responsável:} desenvolvedores
+    \item A equipe de desenvolvimento irá com as história de usuário planejadas para aquelas sprint, criar um incremento do produto
+      para entregar ao cliente.
+  \end{itemize}
+
+\subsubsection{Realizar Revisão da Sprint}
+  \begin{itemize}
+    \item \textbf{Entrada:} Histórias das sprints implementadas.
+    \item \textbf{Saída:} Revisão completa das novas funcionalidades.
+    \item \textbf{Responsável:} Equipe
+    \item A equipe irá fazer uma revisão completa das novas funcionalidade implementadas no produto
+  \end{itemize}
+
+\subsubsection{Realizar Retrospectiva da Sprint}
+  \begin{itemize}
+    \item \textbf{Entrada:} Revisão da sprint efetuada.
+    \item \textbf{Saída:} Verificar se existem mais features e quais foram os pontos positivos e negativos da sprint
+    \item \textbf{Responsável:} Equipe
+    \item A equipe irá fazer uma retrospectiva para ver se existem mais features e quais foram os pontos positivos e negativos da
+      sprint para poder melhorar nas próximas.
+  \end{itemize}
+
+\subsubsection{Gerenciar sprint}
+  \begin{itemize}
+    \item \textbf{Entrada:} sprint backlog.
+    \item \textbf{Responsável:} product owner.
+    \item O product owner junto ao resto da equipe irão verificar se existem mais histórias de usuário na sprint backlog para ser
+      implementadas.
+  \end{itemize}
+
+\subsubsection{Gerenciar História de Usuário}
+  \begin{itemize}
+    \item \textbf{Entrada:} team backlog.
+    \item \textbf{Responsável:} product owner.
+    \item O product owner junto ao resto da equipe irão verificar se existem mais histórias de usuário na team backlog para ser
+      inserida no planejamento das sprints ou se é necessária a criação de novas histórias.
+  \end{itemize}
 
 \section{Maturidade}
 
