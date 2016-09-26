@@ -234,3 +234,62 @@ TODO: Falar um pouco sobre o que é o processo, em linhas gerais basicament.
       \end{itemize}
   \end{description}
 
+\section{Artefatos}
+  
+  Os artefatos são os produtos das atividades do SAFe. Atividades geram artefatos,e esses artefatos servem de entradas e saídas das atividades. Logo uma atividade tem como entrada artefatos anteriores, e cada atividade do processo pode ou não gerar um artefato.
+  Discutiremos de qual atividade os principais artefatos se originam e em qual processo ele serve como entrada, e sua importância para a atividade.
+
+
+\subsection {Temas estratégicos}
+
+  O artefato “Temas estratégicos” é o primeiro artefato gerado, reflete em alto nível as necessidade do cliente, representam  um conjunto de iniciativas que irão dirigir os investimentos, em sistemas, produtos, aplicações e serviços. Todos os artefatos seguintes se originam dele.
+  
+\subsection {Backlog de épicos}
+  
+  Artefato gerado na atividade “Definir épicos”. Baseado no documento “Temas estratégicos”. Backlog de épicos contém épicos do sistema que geram novos produtos, soluções ou serviços para o cliente baseado nas necessidades dos stakeholders. Composto por uma coleção de features que serão entregues em releases e podem ser realizados por mais de um time.
+  Este artefato tem seus principais épicos de interesse para os stakeholders priorizado na atividade “Épico priorizado”. E para garantir que os épicos levantados estão de acordo com as necessidades dos stakeholders, podem ser validados na atividade de “Validar épicos”, caso alguma mudança seja necessária.
+
+\subsection {Backlog de features}
+
+  O Backlog de features é produzido pela atividade de “Definir as features” que é baseada no artefato “Backlog de épicos”, e temos uma atividade de validação. Esse artefato é então validado em “Validar features” para que todas as features estejam corretas de acordo com a necessidade dos stakeholders. Features são serviços do sistema que cumprem as necessidades e são entregues em releases e vão formar as histórias de usuário.
+
+\subsection {Visão}
+
+  Artefato gerado na atividade “Definir a visão”. Esse artefato é um conjunto de características que descrevem o que o sistema irá prover e que benefícios vai agregar ao usuário. Tendo como base as Features e Enablers.
+  Responde as  questões :
+
+  \begin{itemize}
+
+    \item Qual é a intenção estratégica desse programa?
+    \item Qual o problema essa aplicação, produto ou sistema será resolvido?
+    \item Quais as características e benefícios serão providos ?
+    \item Para quem irá fornecê-lá?
+    \item Qual a performance, confiabilidade, etc, será entregue?
+    \item Qual a plataforma, padrões e aplicações, etc., serão suportados?
+
+  \end{itemize}
+
+  A visão é necessária para a construção do Roadmap e para a artefato Planejar Incremento do Produto.
+
+\subsection {Roadmap}
+
+  O Roadmap é produzido na atividade “Definir o roadmap”. Consiste em uma série de releases planejadas, com suas datas, features e priorizações. Podemos então visualizar as features priorizadas e seu objetivo, com clareza além de fazer um excelente planejamento. Atividade necessária  para o artefato “Planejar o incremento do produto”.
+
+  \begin{figure}[!htb]
+    \centering
+    \includegraphics[width=9cm]{figuras/requisitos/roadmap.eps}
+    \caption{roadmap}
+  \end{figure}
+
+\subsection {Objetivos de PI}
+  
+  O artefato Objetivo de PI  é produzido pela atividade “Planejar incremento do produto”, essa atividade tem como base o artefato Roadmap em que as histórias foram priorizadas.
+  Esse artefato é necessário para o planejamento da iteração e para gerenciar possíveis mudanças dos requisitos.
+
+\subsection {Backlog da sprint}
+
+  Artefato gerado pela atividade de “Planejar a sprint”, são registrada as histórias de usuário que devem ser implementados na sprint e os critérios de aceitação. O Backlog deve ser atualizado a cada iteração.
+
+\subsection {Incremento de software}
+  
+  Artefato gerado pela atividade de “Implementar história da sprint”. A cada iteração do SCRUM mais código é adicionado ao artefato com a implementação das histórias de usuário.
